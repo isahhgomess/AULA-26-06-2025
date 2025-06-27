@@ -1,0 +1,192 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(120deg, #ff5e62, #f06292, #ff4081, #d81b60);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 95%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: slideIn 1s ease-out;
+}
+
+.header {
+    background: url('https://images.pexels.com/photos/3373735/pexels-photo-3373735.jpeg') no-repeat center;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 15px 15px 0 0;
+    margin: -40px -40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 20, 147, 0.6);
+    z-index: 1;
+}
+
+.header h1, .header p {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-size: 3.2em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.9em;
+    color: #d81b60;
+    margin: 20px 0 15px;
+    font-weight: 700;
+}
+
+.checkbox-group {
+    background: rgba(255, 245, 247, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 1.1em;
+    color: #4a2c40;
+    transition: all 0.3s ease;
+}
+
+label:hover {
+    transform: translateX(10px);
+    color: #ff4081;
+}
+
+.product-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"] {
+    margin-right: 15px;
+    width: 22px;
+    height: 22px;
+    accent-color: #ff4081;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="checkbox"][readonly] {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background: #f8bbd0;
+}
+
+button {
+    background: linear-gradient(45deg, #ff1744, #f50057);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 25px auto;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 23, 68, 0.5);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 23, 68, 0.7);
+    background: linear-gradient(45deg, #f50057, #ff1744);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #4a2c40;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.decor {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+.lipstick {
+    width: 100px;
+    height: 100px;
+    background: url('https://images.pexels.com/photos/1486059/pexels-photo-1486059.jpeg') no-repeat center;
+    top: 10px;
+    right: 10px;
+    transform: rotate(45deg);
+}
+
+.palette {
+    width: 120px;
+    height: 120px;
+    background: url('https://images.pexels.com/photos/3373740/pexels-photo-3373740.jpeg') no-repeat center;
+    bottom: 10px;
+    left: 10px;
+    transform: rotate(-30deg);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.5em; }
+    label { font-size: 1em; }
+    .product-icon { width: 25px; height: 25px; }
+    button { padding: 12px 30px; font-size: 1em; }
+    .container { padding: 20px; }
+    .decor { display: none; }
+}
